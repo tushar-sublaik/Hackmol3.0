@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <style>
+        body{
+    background-color: #2f3640;
+    border-top: rgb(227, 229, 236);
+    border-width: 20px;
+    
+}
+.header {
+    padding: 10px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+    border-radius: 20%;
+  }
+  .himg{
+      height: 100px;
+      width: 100px;
+      border-radius: 90%;
+      box-shadow: 5px 5px 5px 5px #fefffff5;
+  }
+  .himg:hover{
+    box-shadow: 5px 5px 5px 5px white;
+    border: 0px; 
+}
+.main
+{   display: flex;
+    justify-content: center;
+    background-color: #151516f5;
+   
+    height: auto;
+    align-items: center;
+
+}
+
+.speak 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 60px;
+    padding: 10px;
+
+
+}
+.speak input
+{
+    width: 598px;
+    height: 40px;
+    font-size: medium;
+}
+.speak input:hover
+{
+    box-shadow: 5px 5px 5px 5px #151516f5;
+    border: 0px;
+}
+.basic{
+    text-decoration-color: #6c3fa7f5;
+    align-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    border-color: blanchedalmond;
+    background-color: rgba(255, 0, 255, 0.219);
+    border-width: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px #b140bb;
+    padding: 20px;
+    
+}
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: red;
+  }
+.basic:hover{
+    box-shadow: 5px 5px 5px 5px white;
+    border: 0px; 
+}
+.intro{
+    background-color: #f44336;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+}
+.intro:hover{
+    box-shadow: 5px 5px 5px 5px white;
+    border: 0px; 
+}
+        
+    </style>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=6AqfGK6s"></script> 
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <title>Simplicate-speech to text.</title>
+</head>
+<body> 
+    
+    <a href="home.html" align="left">go back to home page</a><br><br> <br><input 
+    onclick="responsiveVoice.speak($('#text').val(),$('#voiceselection').val());" 
+    type="button" 
+    value="hey judges lets have a brief intro first" 
+    class="intro"
+  />  
+    <div class="header">
+       
+        <img  class ="himg" src="https://github.com/Abhishek130902/hackmol-project/blob/main/header_image.jpg?raw=true">
+    </img>
+        <p>Speech to text is a speech recognition software that enables the recognition and translation of spoken language into text through computational linguistics. ...<br><br> Specific applications, tools, and devices can transcribe audio streams in real-time to display text and act on it.</p>
+      </div>
+     
+  
+<br>
+<br>
+   <marquee scrollamount="20">  <center><font color="white"><h1 class="basic">Thank you for using Simplicate...</h1></font></center>  </marquee> 
+
+   
+    <div class="main">
+        
+        <div class="speak">
+            <input type="text "  id ="speechTOText" placeholder="please speak up I am listning..." onclick="record()"  >
+            
+            </div>
+    </div>
+    <font color="blue">
+    <h2><u>Try other services we offer</u></h2>
+    </font>
+    <ul>
+        <li><a href="face.html">Emotion recognition</a></li>
+        <br>
+        <li><a href="Chatbot.html">The chatbot</a></li>
+        
+    </ul>
+
+    <script>
+    function record()
+ {
+     var recognition=new webkitSpeechRecognition();
+     recognition.lang="en-GB";
+     recognition.onresult=function(event)
+     {
+         document.getElementById("speechTOText").value=event.results[0][0].transcript;
+     } 
+     recognition.start()
+        }
+    </script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=6AqfGK6s"></script> <>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+ 
+<textarea id="text" cols="0" rows="0">
+
+welcome judges.
+my name is tech talker.
+to proceed please click the box in the middle. 
+</textarea>
+ 
+<select id="voiceselection"></select> 
+ 
+
+ 
+<script>
+        //Populate voice selection dropdown
+        var voicelist = responsiveVoice.getVoices();
+        var vselect = $("#voiceselection");
+        $.each(voicelist, function() {
+                vselect.append($("<option />").val(this.name).text(this.name));
+        });
+</script>
+   
+</body>
+</html>

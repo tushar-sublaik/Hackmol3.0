@@ -1,0 +1,87 @@
+body{
+    background-color: #2f3640;
+    border-top: rgb(227, 229, 236);
+    border-width: 20px;
+    
+}
+.header {
+    padding: 10px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+    border-radius: 20%;
+  }
+  .himg{
+      height: 100px;
+      width: 100px;
+      border-radius: 90%;
+      box-shadow: 5px 5px 5px 5px #fefffff5;
+  }
+  .himg:hover{
+    box-shadow: 5px 5px 5px 5px white;
+    border: 0px; 
+}
+.main
+{   display: flex;
+    justify-content: center;
+    background-color: #151516f5;
+   
+    height: auto;
+    align-items: center;
+
+}
+
+.speak 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 60px;
+    padding: 10px;
+
+
+}
+.speak input
+{
+    width: 598px;
+    height: 40px;
+    font-size: medium;
+}
+.speak input:hover
+{
+    box-shadow: 5px 5px 5px 5px #151516f5;
+    border: 0px;
+}
+.basic{
+    text-decoration-color: #6c3fa7f5;
+    align-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    border-color: blanchedalmond;
+    background-color: rgba(255, 0, 255, 0.219);
+    border-width: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px #b140bb;
+    padding: 20px;
+    
+}
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: red;
+  }
+.basic:hover{
+    box-shadow: 5px 5px 5px 5px white;
+    border: 0px; 
+}

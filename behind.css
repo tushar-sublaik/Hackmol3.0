@@ -1,0 +1,36 @@
+html,body {
+    width:100vw;
+    height: 100vh;
+    margin: 0;
+}
+#videoBG {
+    position:absolute;
+    z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+    #videoBG {
+        width:100%;
+        height:inherit;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #videoBG { 
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-width: 767px) {
+    #videoBG {
+        display: none;
+    }
+    body {
+        background: url('C:\Users\tushar\Pictures\emotion background.png');
+        background-size: cover;
+    }
+}
+.button {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
