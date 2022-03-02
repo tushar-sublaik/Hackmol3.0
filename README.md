@@ -33,15 +33,15 @@ Team name: Technist
 
 Members: 4
 
-Tushar Sublaik (BT) 1st year
+Tushar Sublaik
 
 
-Abishek Mishra (BT) 1st year
+Abishek Mishra
 
 
-Faiz Ahmad (BT) 1st year
+Faiz Ahmad
 
 
-Adarsh Kumar (BT) 1st year
+Adarsh Kumar
 
 # Is Fresher:       True
